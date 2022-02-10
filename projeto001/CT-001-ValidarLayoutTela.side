@@ -1,0 +1,377 @@
+{
+  "id": "04fc19f3-4864-42b5-916a-f6cbd0a459e9",
+  "version": "2.0",
+  "name": "teste001",
+  "url": "https://livros.inoveteste.com.br",
+  "tests": [{
+    "id": "64140b71-69eb-416b-bc64-258404d604fb",
+    "name": "CT001-EnviarMensagem",
+    "commands": [{
+      "id": "4375e4d7-9d3a-4390-8aa8-6ad82a24c75a",
+      "comment": "Acessa o site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7465ec60-84d7-4e07-8837-d574ddae851e",
+      "comment": "",
+      "command": "//setWindowSize",
+      "target": "711x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1d318ed-603b-4afd-b212-a77d6a17c9cf",
+      "comment": "",
+      "command": "//Acessa o menu do site e seleciona a opção contato",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fbcd0b4-1f17-4f1e-92a5-d51a9e94437d",
+      "comment": "Acessa o menu do site",
+      "command": "click",
+      "target": "linkText=Menu",
+      "targets": [
+        ["linkText=Menu", "linkText"],
+        ["css=.responsive-menu-button", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9381702e-9de6-4bed-a252-c98e252e5f5a",
+      "comment": "Seleciona a opção Contato",
+      "command": "click",
+      "target": "css=.sidr-inner > #nav-wrap > #primary_menu > #menu-item-80 span",
+      "targets": [
+        ["css=.sidr-inner > #nav-wrap > #primary_menu > #menu-item-80 span", "css:finder"],
+        ["xpath=(//li[@id='menu-item-80']/a/span)[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/div/nav/ul/li[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8306f4d-1a76-4cb3-8f03-69d6870f95d2",
+      "comment": "",
+      "command": "//Validando layout da tela",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30b3c7ce-db51-4bb2-bd55-4ce5e2dd8c4f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.wpb_column:nth-child(1) h1",
+      "targets": [
+        ["css=.wpb_column:nth-child(1) h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Envie uma mensagem')]", "xpath:innerText"]
+      ],
+      "value": "Envie uma mensagem"
+    }, {
+      "id": "83a6b594-d276-4441-91f3-d1b09af91111",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=your-name",
+      "targets": [
+        ["name=your-name", "name"],
+        ["css=.your-name > .wpcf7-form-control", "css:finder"],
+        ["xpath=//input[@name='your-name']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p/label/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bcf6482-7a29-4e09-8b7f-d12f833edc0b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=your-email",
+      "targets": [
+        ["name=your-email", "name"],
+        ["css=.wpcf7-email", "css:finder"],
+        ["xpath=//input[@name='your-email']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[2]/label/span/input", "xpath:idRelative"],
+        ["xpath=//p[2]/label/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "956ac1f7-62c2-49bc-b526-545b4a1f495d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=your-subject",
+      "targets": [
+        ["name=your-subject", "name"],
+        ["css=.your-subject > .wpcf7-form-control", "css:finder"],
+        ["xpath=//input[@name='your-subject']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[3]/label/span/input", "xpath:idRelative"],
+        ["xpath=//p[3]/label/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8dc40cf3-1198-4da1-8c55-f829f4e03eda",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=your-message",
+      "targets": [
+        ["name=your-message", "name"],
+        ["css=.wpcf7-textarea", "css:finder"],
+        ["xpath=//textarea[@name='your-message']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[4]/label/span/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b213d4b-7aa6-4072-88c3-fad9944c4d6c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.wpcf7-submit",
+      "targets": [
+        ["css=.wpcf7-submit", "css:finder"],
+        ["xpath=//input[@value='Enviar']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6e0b5c4-5116-433e-970d-8a48136a9987",
+      "comment": "",
+      "command": "//Clica no botão salvar sem preencher os campos obrigatórios",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2be2359-d70d-4a9a-a27e-ca01b4c3e38b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wpcf7-submit",
+      "targets": [
+        ["css=.wpcf7-submit", "css:finder"],
+        ["xpath=//input[@value='Enviar']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e5bddc1-d098-4f80-8cd2-4991526e76a6",
+      "comment": "",
+      "command": "//Vallida as mensagens de crítica dos campos obrigatórios",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e578ee6-242a-4532-bcab-42856b49a01b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.your-name > .wpcf7-not-valid-tip",
+      "targets": [
+        ["css=.your-name > .wpcf7-not-valid-tip", "css:finder"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p/label/span/span", "xpath:idRelative"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": "O campo é obrigatório."
+    }, {
+      "id": "2a28c4c6-6f5c-4f8e-8eb2-c4d28720f166",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.your-email > .wpcf7-not-valid-tip",
+      "targets": [
+        ["css=.your-email > .wpcf7-not-valid-tip", "css:finder"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[2]/label/span/span", "xpath:idRelative"],
+        ["xpath=//p[2]/label/span/span", "xpath:position"]
+      ],
+      "value": "O campo é obrigatório."
+    }, {
+      "id": "8f07b67c-4662-4da0-9cab-2f74d41af254",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.your-subject > .wpcf7-not-valid-tip",
+      "targets": [
+        ["css=.your-subject > .wpcf7-not-valid-tip", "css:finder"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[3]/label/span/span", "xpath:idRelative"],
+        ["xpath=//p[3]/label/span/span", "xpath:position"]
+      ],
+      "value": "O campo é obrigatório."
+    }, {
+      "id": "f5853f64-a296-4261-9454-13c54b6755c7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.your-message > .wpcf7-not-valid-tip",
+      "targets": [
+        ["css=.your-message > .wpcf7-not-valid-tip", "css:finder"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[4]/label/span/span", "xpath:idRelative"],
+        ["xpath=//p[4]/label/span/span", "xpath:position"]
+      ],
+      "value": "O campo é obrigatório."
+    }, {
+      "id": "4e1b67f2-f71e-4941-ad34-24780ac1369b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.wpcf7-response-output",
+      "targets": [
+        ["css=.wpcf7-response-output", "css:finder"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div[2]", "xpath:position"]
+      ],
+      "value": "Um ou mais campos possuem um erro. Verifique e tente novamente."
+    }, {
+      "id": "a5feaef0-ad28-4d1f-8f85-37b7ab8d5d1e",
+      "comment": "",
+      "command": "//Preenche todos os campos do formulário",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4abe9860-d6d9-48bf-83dd-85bff1c9bb17",
+      "comment": "",
+      "command": "click",
+      "target": "name=your-name",
+      "targets": [
+        ["name=your-name", "name"],
+        ["css=.your-name > .wpcf7-form-control", "css:finder"],
+        ["xpath=//input[@name='your-name']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p/label/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "852c8442-7818-496e-b323-6fb8b5254d57",
+      "comment": "",
+      "command": "type",
+      "target": "name=your-name",
+      "targets": [
+        ["name=your-name", "name"],
+        ["css=.your-name > .wpcf7-form-control", "css:finder"],
+        ["xpath=//input[@name='your-name']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p/label/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "Edson Souza"
+    }, {
+      "id": "fa432f9d-0a59-44eb-a433-87738cf84462",
+      "comment": "",
+      "command": "click",
+      "target": "name=your-email",
+      "targets": [
+        ["name=your-email", "name"],
+        ["css=.wpcf7-email", "css:finder"],
+        ["xpath=//input[@name='your-email']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[2]/label/span/input", "xpath:idRelative"],
+        ["xpath=//p[2]/label/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40798287-aaeb-4da8-a67e-50872e6a92d2",
+      "comment": "",
+      "command": "type",
+      "target": "name=your-email",
+      "targets": [
+        ["name=your-email", "name"],
+        ["css=.wpcf7-email", "css:finder"],
+        ["xpath=//input[@name='your-email']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[2]/label/span/input", "xpath:idRelative"],
+        ["xpath=//p[2]/label/span/input", "xpath:position"]
+      ],
+      "value": "edsonfrs@gmail.com"
+    }, {
+      "id": "e18082ef-4d92-49ec-8880-f2cd2e7b2383",
+      "comment": "",
+      "command": "click",
+      "target": "name=your-subject",
+      "targets": [
+        ["name=your-subject", "name"],
+        ["css=.your-subject > .wpcf7-form-control", "css:finder"],
+        ["xpath=//input[@name='your-subject']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[3]/label/span/input", "xpath:idRelative"],
+        ["xpath=//p[3]/label/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5d570aa-08a5-49e8-b0e5-544ee814f7d6",
+      "comment": "",
+      "command": "type",
+      "target": "name=your-subject",
+      "targets": [
+        ["name=your-subject", "name"],
+        ["css=.your-subject > .wpcf7-form-control", "css:finder"],
+        ["xpath=//input[@name='your-subject']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[3]/label/span/input", "xpath:idRelative"],
+        ["xpath=//p[3]/label/span/input", "xpath:position"]
+      ],
+      "value": "teste "
+    }, {
+      "id": "a63d2c70-8c0a-4fe2-9ef2-2048c9888ee2",
+      "comment": "",
+      "command": "click",
+      "target": "name=your-message",
+      "targets": [
+        ["name=your-message", "name"],
+        ["css=.wpcf7-textarea", "css:finder"],
+        ["xpath=//textarea[@name='your-message']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[4]/label/span/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9cd17e2-1365-4a8e-9cf5-3ada060af521",
+      "comment": "",
+      "command": "type",
+      "target": "name=your-message",
+      "targets": [
+        ["name=your-message", "name"],
+        ["css=.wpcf7-textarea", "css:finder"],
+        ["xpath=//textarea[@name='your-message']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[4]/label/span/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Mensagem de teste"
+    }, {
+      "id": "0d3abac2-0398-406c-8df4-e0ff7c69cbbc",
+      "comment": "",
+      "command": "//Clica no botão enviar após preencher todos os campos",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bda2988-d622-49b4-b494-40cbd4959485",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wpcf7-submit",
+      "targets": [
+        ["css=.wpcf7-submit", "css:finder"],
+        ["xpath=//input[@value='Enviar']", "xpath:attributes"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fd0a1c9-4c2e-46ab-8ec5-1731a573d630",
+      "comment": "",
+      "command": "//Valida a mensagem de sucesso no envio da mensagem",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d08625c1-162c-4153-9d2d-f641e653b266",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.wpcf7-response-output",
+      "targets": [
+        ["css=.wpcf7-response-output", "css:finder"],
+        ["xpath=//div[@id='wpcf7-f372-p24-o1']/form/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div[2]", "xpath:position"]
+      ],
+      "value": "Agradecemos a sua mensagem. Responderemos em breve."
+    }]
+  }],
+  "suites": [{
+    "id": "172262d6-f003-42d3-aa99-8defd1064f63",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["64140b71-69eb-416b-bc64-258404d604fb"]
+  }],
+  "urls": ["https://inoveteste.com.br/", "https://livros.inoveteste.com.br/"],
+  "plugins": []
+}
