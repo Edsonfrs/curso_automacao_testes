@@ -1,0 +1,239 @@
+{
+  "id": "1aee2225-c6d8-4080-88fa-b3fa04cf9001",
+  "version": "2.0",
+  "name": "desafios-testes-001",
+  "url": "https://seubarriga.wcaquino.me",
+  "tests": [{
+    "id": "f3b6c5bf-b6c4-40b9-91b2-350132237ba8",
+    "name": "CT-001-ValidarLoginNoSiteComDadosCorretos",
+    "commands": [{
+      "id": "84792f93-74ea-4a90-88b1-857351790c9e",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8816e16b-c0c0-4742-a06d-8abab5ba1dce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "910x673",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70c06a3e-2830-49b7-bd72-7754e33d6de9",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be268109-a956-471b-a01e-34a9bfcd60a9",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fullstack.3110@gmail.com"
+    }, {
+      "id": "ddd93aa7-c007-4926-89b4-2a985c2bc233",
+      "comment": "",
+      "command": "click",
+      "target": "id=senha",
+      "targets": [
+        ["id=senha", "id"],
+        ["name=senha", "name"],
+        ["css=#senha", "css:finder"],
+        ["xpath=//input[@id='senha']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "967e57aa-26b4-4c88-98d3-47cd90c218d2",
+      "comment": "",
+      "command": "type",
+      "target": "id=senha",
+      "targets": [
+        ["id=senha", "id"],
+        ["name=senha", "name"],
+        ["css=#senha", "css:finder"],
+        ["xpath=//input[@id='senha']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "9a510c23-4956-4cd0-a268-b435fdf94f3c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3c0b950-c71f-4050-b529-e8919ae3b854",
+      "comment": "",
+      "command": "click",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//body/div", "xpath:position"],
+        ["xpath=//div[contains(.,'Bem vindo, Edson!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dceadcde-f31d-4155-bd28-9e3ded681a0c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//body/div", "xpath:position"],
+        ["xpath=//div[contains(.,'Bem vindo, Edson!')]", "xpath:innerText"]
+      ],
+      "value": "Bem vindo, Edson!"
+    }, {
+      "id": "6c62a8ad-cb1b-41a9-82ff-823d55a6461a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "45c5c471-169b-4ef1-adf5-d51f61fb36a1",
+    "name": "CT-002-ValidarLoginNoSiteComDadosIncorretos",
+    "commands": [{
+      "id": "acb73b2d-172a-4bb6-8cd9-d417503301c1",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "975bd305-1a39-4611-b1f9-6cb0214301c9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "774x673",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac30b15f-4367-4d79-99d3-7dbfbf2c9e3f",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5bf5cd9-f78e-417e-a2e0-358d27c05e7c",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fullstack.3110@gmail.com"
+    }, {
+      "id": "6e272bc4-8f70-47c4-a1f5-282071ac66de",
+      "comment": "",
+      "command": "click",
+      "target": "id=senha",
+      "targets": [
+        ["id=senha", "id"],
+        ["name=senha", "name"],
+        ["css=#senha", "css:finder"],
+        ["xpath=//input[@id='senha']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c2695cb-248f-42c2-b0aa-3f173fb7e08a",
+      "comment": "",
+      "command": "type",
+      "target": "id=senha",
+      "targets": [
+        ["id=senha", "id"],
+        ["name=senha", "name"],
+        ["css=#senha", "css:finder"],
+        ["xpath=//input[@id='senha']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "123456789"
+    }, {
+      "id": "a5e6439e-603a-4755-ac36-83ae7b095d90",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "32b75c10-9052-48c1-ae96-dd99e37cf464",
+      "comment": "",
+      "command": "click",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//body/div", "xpath:position"],
+        ["xpath=//div[contains(.,'Problemas com o login do usuário')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82b669b6-973a-4241-9918-7219683a56d7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//body/div", "xpath:position"],
+        ["xpath=//div[contains(.,'Problemas com o login do usuário')]", "xpath:innerText"]
+      ],
+      "value": "Problemas com o login do usuário"
+    }, {
+      "id": "0502b9de-2612-4365-bebc-00295c3f8025",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "20238f5d-2729-4e4f-b571-5b48170b9692",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f3b6c5bf-b6c4-40b9-91b2-350132237ba8"]
+  }],
+  "urls": ["https://seubarriga.wcaquino.me/"],
+  "plugins": []
+}
